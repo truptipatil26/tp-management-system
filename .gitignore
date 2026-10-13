@@ -1,0 +1,21 @@
+# dependencies and builds
+node_modules/
+dist/
+.venv/
+__pycache__/
+*.pyc
+
+# secrets: never commit these
+.env
+.env.*
+!.env.example
+
+# personal data: never commit
+screenshots/
+*.png.private
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json

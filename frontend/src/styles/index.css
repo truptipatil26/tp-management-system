@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+/* Enables the `dark:` variant when <html class="dark"> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------- Design tokens: LIGHT ---------- */
+:root {
+  --background: #f4f6f9;
+  --surface: #ffffff;
+  --surface-alt: #f8fafc;
+  --border: #e2e8f0;
+  --text: #1e293b;
+  --muted: #64748b;
+  --primary: #3b5bdb;
+  --primary-contrast: #ffffff;
+  --success: #15803d;
+  --warning: #b45309;
+  --danger: #b91c1c;
+  color-scheme: light;
+}
+
+/* ---------- Design tokens: DARK ---------- */
+.dark {
+  --background: #0f172a;
+  --surface: #1e293b;
+  --surface-alt: #172033;
+  --border: #334155;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --primary: #748ffc;
+  --primary-contrast: #0f172a;
+  --success: #4ade80;
+  --warning: #fbbf24;
+  --danger: #f87171;
+  color-scheme: dark;
+}
+
+/* Expose tokens as Tailwind utilities: bg-surface, text-muted, border-border ... */
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-alt: var(--surface-alt);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-primary: var(--primary);
+  --color-primary-contrast: var(--primary-contrast);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --font-sans: "Inter", ui-sans-serif, system-ui, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: var(--font-sans);
+}
